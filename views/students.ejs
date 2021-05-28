@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css"></link>
+    <ul  >
+      <li >
+        <a  href="/">Home page</a>
+      </li>
+      <li >
+        <a  href="/students">List of students</a>
+      </li>
+      <li >
+        <a  href="/students/data">Data visualization</a>
+      </li>
+      <li >
+        <a  href="/students/create">Creation of student</a>
+      </li>
+  </ul>
+  </head>
+  <body>
+    <main>
+    <h1 >Presentation of the students</h1>
+    <p >
+      If you want to have further informations on any student, you just have to click on their name.</p>
+    <ul >
+      <div >
+        <% for (var i = 0; i<students.length; i++) { %>
+        <a href="/students/<%=i%>" >
+          <%= students[i].name %> - <%= students[i].school %> 
+        </a>
+        <%}%>
+      </div> 
+    </ul>
+   </main>
+  </body>
+  <img src="https://worldscholarshipforum.com/wp-content/uploads/2019/03/scholarships-for-philippines-students-to-study-in-the-usa.jpg"/>
+</html>
